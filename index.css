@@ -1,94 +1,37 @@
-/* ============================================================
-   index.css — Drinkly | Login page styles
-   ============================================================ */
+/* Drinkly — login page */
 
-/* ---- Element selectors (login-specific) ---- */
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 0.7rem 1rem;
-  border: 2px solid #BBDEFB;
-  border-radius: 10px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  color: var(--text-dark);
-  background: var(--white);
-  transition: border-color 0.25s, box-shadow 0.25s;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-label {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: var(--blue-dark);
-}
-
-/* ---- Class selectors ---- */
-.login-wrapper {
+main {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 65vh;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.login-card {
-  background: var(--white);
-  border-radius: 20px;
-  padding: 2.5rem;
-  box-shadow: 0 8px 36px rgba(21, 101, 192, 0.18);
+.side-tree {
+  width: 200px;
+  height: auto;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .side-tree {
+    display: none;
+  }
+}
+
+.login-container {
   width: 100%;
-  max-width: 440px;
+  max-width: 420px;
+  padding: 2rem;
 }
 
-.login-card h2 {
+.login-container h2 {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
-.login-buttons {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-.btn-primary-custom {
-  background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
-  color: var(--white);
-  flex: 1;
-  box-shadow: 0 4px 14px rgba(21, 101, 192, 0.3);
-}
-
-.btn-outline-custom {
-  background: transparent;
-  color: var(--blue-dark);
-  border: 2px solid var(--blue-dark);
-  flex: 1;
-}
-
-/* ---- Pseudo selectors ---- */
-input[type="email"]:focus,
-input[type="password"]:focus {
-  outline: none;
-  border-color: var(--blue-dark);
-  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.14);
-}
-
-/* ---- Responsive ---- */
-@media (max-width: 768px) {
-  .login-card {
-    padding: 1.8rem;
-    border-radius: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .login-buttons {
-    flex-direction: column;
-  }
-
-  .login-card {
-    padding: 1.4rem;
-  }
+input[type='email']:focus,
+input[type='password']:focus {
+  border-color: #0a58ca;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
