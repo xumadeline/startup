@@ -1,0 +1,86 @@
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--blue-dark);
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 2px solid #BBDEFB;
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: border-color 0.25s, box-shadow 0.25s;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--blue-dark);
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.14);
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+}
+
+.login-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 36px rgba(21, 101, 192, 0.18);
+  width: 100%;
+  max-width: 440px;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+  color: var(--white);
+  flex: 1;
+  box-shadow: 0 4px 14px rgba(21, 101, 192, 0.3);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--blue-dark);
+  border: 2px solid var(--blue-dark);
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: 1.8rem;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-buttons {
+    flex-direction: column;
+  }
+
+  .login-card {
+    padding: 1.4rem;
+  }
+}

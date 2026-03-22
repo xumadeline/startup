@@ -1,0 +1,46 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th {
+  background-color: var(--blue-dark);
+  color: var(--white);
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+td {
+  padding: 0.85rem 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--blue-bg);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #F5F9FF;
+}
+
+table tbody tr:hover {
+  background-color: var(--blue-bg);
+  cursor: pointer;
+}
+
+.rank-gold td:first-child   { color: #F59E0B; font-weight: 800; font-size: 1.2rem; }
+.rank-silver td:first-child { color: #94A3B8; font-weight: 800; font-size: 1.1rem; }
+.rank-bronze td:first-child { color: #B45309; font-weight: 800; font-size: 1.05rem; }
+
+.you-row {
+  background-color: #E8F5E9 !important;
+}
+
+.you-row td {
+  font-weight: 700;
+  color: var(--green-dark);
+}
