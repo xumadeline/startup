@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #1565c0;
+  color: white;
+  padding: 0.7rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #e3f2fd;
+}
+
+.rank-gold td:first-child {
+  color: orange;
+}
+
+.rank-silver td:first-child {
+  color: gray;
+}
+
+.rank-bronze td:first-child {
+  color: brown;
+}
+
+.you-row {
+  background-color: #e8f5e9;
+}
