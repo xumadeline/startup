@@ -38,19 +38,7 @@ export default function Dashboard() {
 
         {/* Right: Notifications + Stats */}
         <div>
-          <div className="card mb-3">
-            <div className="card-body">
-              <h5 className="card-title">Realtime Notifications</h5>
-              <ul>
-                <li>🫗 Friend Alice logged 8 oz of water!</li>
-                <li>🏆 Friend Bob reached their daily goal!</li>
-                <li>🍎 You unlocked a new fruit reward!</li>
-                <li>💬 Sarah just passed 60 oz today!</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="card">
+<div className="card">
             <div className="card-body">
               <h5 className="card-title">Your Stats</h5>
               <ul className="list-unstyled">
