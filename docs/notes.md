@@ -1,6 +1,6 @@
 # CS 260 Notes
 
-[My startup - Drinkly](https://simon.cs260.click)
+[My startup - Drinkly](https://startup.drink-ly.com)
 
 ## Startup Specification
 
@@ -57,6 +57,10 @@ I spent a good amount of time making Drinkly look like a real app. Here's what I
 **`@media` queries** let you apply different CSS at different screen widths. I added breakpoints at 768px (tablet) and 480px (phone) to collapse the 2-column dashboard grid to 1 column and stack the header vertically.
 
 Key rule: always set `box-sizing: border-box` on `*` so padding doesn't cause elements to overflow their containers.
+
+## Simon CSS (quick notes)
+
+I cloned the Simon CSS repo, ran it with Live Server, and played with the CSS to see changes in the browser. I used the `deployFiles.sh` script to push it to my server so it shows at my simon subdomain.
 
 <!--
 
