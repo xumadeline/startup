@@ -5,7 +5,7 @@ export default function About() {
     <main className="container-fluid text-center" style={{ padding: '1rem 2rem' }}>
       <div>
         <h2 className="pt-3" style={{ color: '#1a237e' }}>What is Drinkly?</h2>
-        <p style={{ color: '#1565c0' }}>
+        <p style={{ color: '#1565c0', maxWidth: '500px', margin: '0 auto 1rem' }}>
           Drinkly is a gamified water intake tracker that turns hydration into a daily streak game.
           Log water with a single tap and watch your virtual tree grow with animations as you hit
           your personalized goals. Earn fruit rewards, unlock new tree species, and compete with
@@ -13,7 +13,7 @@ export default function About() {
         </p>
 
         <h4 className="mt-4" style={{ color: '#1a237e' }}>Key Features</h4>
-        <div className="features-grid text-start">
+        <div className="features-grid text-start" style={{ maxWidth: '600px', margin: '0 auto' }}>
           <div className="feature-card">🔐 Secure login &amp; registration</div>
           <div className="feature-card">🎯 Personalized daily goals</div>
           <div className="feature-card">💧 One-tap water logging</div>
@@ -23,20 +23,6 @@ export default function About() {
           <div className="feature-card">🌲 Unlockable tree types</div>
           <div className="feature-card">🏆 Weekly leaderboard</div>
           <div className="feature-card">⚡ Realtime WebSocket updates</div>
-        </div>
-
-        <h4 className="mt-4" style={{ color: '#1a237e' }}>All Features</h4>
-        <div className="text-start mx-auto" style={{ maxWidth: '500px' }}>
-          <ul className="feature-list bg-white p-3 rounded">
-            <li>Secure user registration, login, and logout</li>
-            <li>Personalized daily hydration goals</li>
-            <li>One-tap water intake logging</li>
-            <li>Animated tree growth and rain effects</li>
-            <li>Streak tracking and fruit rewards</li>
-            <li>Unlockable tree species based on consistency</li>
-            <li>Weekly leaderboard with friend comparisons</li>
-            <li>Realtime friend activity via WebSockets</li>
-          </ul>
         </div>
 
         <div className="quote-box text-start mx-auto mt-4 mb-4" style={{ maxWidth: '500px' }}>
