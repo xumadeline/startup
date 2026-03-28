@@ -1,4 +1,4 @@
-export default function Login() {
+export default function Login({ userName, onLogin }) {
   return (
     <main>
       <div className="login-wrapper">
