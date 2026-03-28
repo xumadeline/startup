@@ -1,13 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
+import { useState } from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import Login from './index/index';
 import Dashboard from './dashboard/dashboard';
 import Leaderboard from './leaderboard/leaderboard';
 import About from './about/about';
 
-function Header() {
+function Header({ userName, onLogout }) {
   return (
     <header>
       <nav className="navbar fixed-top navbar-dark bg-primary">
@@ -17,6 +18,11 @@ function Header() {
           <li className="nav-item"><NavLink className="nav-link" to="/dashboard">Dashboard</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/leaderboard">Leaderboard</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/about">About</NavLink></li>
+          {userName && (
+            <li className="nav-item">
+              <button className="nav-link btn btn-link" onClick={onLogout}>Logout ({userName})</button>
+            </li>
+          )}
         </menu>
       </nav>
     </header>
@@ -35,14 +41,24 @@ function Footer() {
 }
 
 export default function App() {
+  const [userName, setUserName] = useState('');
+
+  function onLogin(name) {
+    setUserName(name);
+  }
+
+  function onLogout() {
+    setUserName('');
+  }
+
   return (
     <BrowserRouter>
       <div className='body bg-dark text-light'>
-        <Header />
+        <Header userName={userName} onLogout={onLogout} />
         <main className="container-fluid">
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<Login userName={userName} onLogin={onLogin} />} />
+            <Route path="/dashboard" element={<Dashboard userName={userName} />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/about" element={<About />} />
           </Routes>
