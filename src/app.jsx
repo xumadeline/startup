@@ -31,7 +31,7 @@ function Header({ userName, onLogout }) {
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white-50">
+    <footer className="bg-primary text-white">
       <div className="container-fluid d-flex justify-content-between">
         <span className="text-reset">Madeline Xu</span>
         <a className="text-reset" href="https://github.com/madelinecharles/startup" target="_blank">GitHub</a>
@@ -53,7 +53,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className='body bg-dark text-light'>
+      <div className='body' style={{ backgroundColor: '#e3f2fd', color: '#1a237e', minHeight: '100vh' }}>
         <Header userName={userName} onLogout={onLogout} />
         <main className="container-fluid">
           <Routes>
