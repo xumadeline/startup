@@ -58,6 +58,13 @@ I spent a good amount of time making Drinkly look like a real app. Here's what I
 
 Key rule: always set `box-sizing: border-box` on `*` so padding doesn't cause elements to overflow their containers.
 
+When I moved to React I had to stub out a few things from the CSS version that need real backend data — will add them back later:
+- Tree stage images on the dashboard (need to show only the current stage based on DB data)
+- Dashboard stats like streak, weekly total, rank (need a service endpoint)
+- Leaderboard rows (need DB data, will use `.map()` to render)
+- Realtime notifications (need WebSockets)
+- ZenQuotes inspirational quote on the about page (need a third-party API call)
+
 ## Simon CSS (quick notes)
 
 I cloned the Simon CSS repo, ran it with Live Server, and played with the CSS to see changes in the browser. I used the `deployFiles.sh` script to push it to my server so it shows at my simon subdomain.
@@ -75,6 +82,7 @@ Key things I learned:
 - `className` replaces `class` in JSX since `class` is a reserved JavaScript keyword
 - The `index.html` at the root is just a shell with `<div id="root">` — React injects all the content via JavaScript
 - Component props like `userName` and `onLogin` are declared now but will be wired up with actual logic in React Part 2
+
 <!--
 
 ## CSS (Simon example notes)

@@ -2,17 +2,17 @@ import './about.css';
 
 export default function About() {
   return (
-    <main className="container-fluid bg-secondary text-center">
+    <main className="container-fluid text-center" style={{ padding: '1rem 2rem' }}>
       <div>
-        <h2 className="text-white pt-3">What is Drinkly?</h2>
-        <p className="text-white-50">
+        <h2 className="pt-3" style={{ color: '#1a237e' }}>What is Drinkly?</h2>
+        <p style={{ color: '#1565c0' }}>
           Drinkly is a gamified water intake tracker that turns hydration into a daily streak game.
           Log water with a single tap and watch your virtual tree grow with animations as you hit
           your personalized goals. Earn fruit rewards, unlock new tree species, and compete with
           friends on a realtime leaderboard.
         </p>
 
-        <h4 className="text-white mt-4">Key Features</h4>
+        <h4 className="mt-4" style={{ color: '#1a237e' }}>Key Features</h4>
         <div className="features-grid text-start">
           <div className="feature-card">🔐 Secure login &amp; registration</div>
           <div className="feature-card">🎯 Personalized daily goals</div>
@@ -25,7 +25,7 @@ export default function About() {
           <div className="feature-card">⚡ Realtime WebSocket updates</div>
         </div>
 
-        <h4 className="text-white mt-4">All Features</h4>
+        <h4 className="mt-4" style={{ color: '#1a237e' }}>All Features</h4>
         <div className="text-start mx-auto" style={{ maxWidth: '500px' }}>
           <ul className="feature-list bg-white p-3 rounded">
             <li>Secure user registration, login, and logout</li>
