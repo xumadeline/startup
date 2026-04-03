@@ -44,7 +44,12 @@ export default function App() {
   const [userName, setUserName] = useState('');
 
   function onLogin(name) {
-    localStorage.removeItem('intake');
+    const currentUser = localStorage.getItem('userName');
+    if (currentUser !== name) {
+      localStorage.removeItem('intake');
+      localStorage.removeItem('streak');
+    }
+    localStorage.setItem('userName', name);
     setUserName(name);
   }
 
